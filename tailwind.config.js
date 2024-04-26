@@ -1,4 +1,7 @@
 /** @type {import('tailwindcss').Config} */
+
+const defaultTheme = require("tailwindcss/defaultTheme");
+
 module.exports = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -7,8 +10,20 @@ module.exports = {
     "public/*.{html,js}",
   ],
   theme: {
+    fontSize: {
+      ...defaultTheme.fontSize,
+      "10xl": [
+        "180px",
+        {
+          lineHeight: "180px",
+          letterSpacing: "-8px",
+          fontWeight: "400",
+        },
+      ],
+    },
     extend: {
       fontFamily: {
+        sans: ["Inter var", ...defaultTheme.fontFamily.sans],
         gtBlack: ["gtBlack", "sans"],
         gtBold: ["gtBold", "sans"],
         gtMedium: ["gtMedium", "sans"],
