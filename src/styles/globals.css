@@ -2,6 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "gtBlack";
+  src: url("../../public/assets/GT-Walsheim-Black.otf");
+}
+
+@font-face {
+  font-family: "gtBold";
+  src: url("../../public/assets/GT-Walsheim-Condensed-Bold.otf");
+}
+
+@font-face {
+  font-family: "gtMedium";
+  src: url("../../public/assets/GT-Walsheim-Condensed-Medium.otf");
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
