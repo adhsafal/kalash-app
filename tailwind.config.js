@@ -13,10 +13,10 @@ module.exports = {
     fontSize: {
       ...defaultTheme.fontSize,
       "10xl": [
-        "180px",
+        "10rem",
         {
-          lineHeight: "180px",
-          letterSpacing: "-8px",
+          lineHeight: "10rem",
+          letterSpacing: "-4px",
           fontWeight: "400",
         },
       ],
@@ -35,7 +35,7 @@ module.exports = {
       },
       letterSpacing: {
         tightest: "-.075em",
-        tighter: "-.05em",
+        tighter: "-.04em",
         tight: "-.025em",
         normal: "0",
         wide: ".02em",

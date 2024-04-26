@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Dialog } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import qrCode from "../../public/qr-code.svg";
+import { isMobile } from "react-device-detect";
 
 function QrCodeBorder(props) {
   return (
@@ -27,6 +28,8 @@ const navigation = [
 export default function Example() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const videoRef = useRef();
+
+  console.log(isMobile);
 
   useEffect(() => {
     if (videoRef.current) {
@@ -167,10 +170,10 @@ export default function Example() {
             </div>
           </div>
           <div className="text-center">
-            <h1 className="text-8xl font-bold tracking-normal text-white sm:text-10xl font-gtMedium">
+            <h1 className="font-bold font-gtMedium tracking-tighter text-white text-5xl sm:text-6xl md:text-6xl lg:text-8xl xl:text-10xl ">
               #1 App for Gold <br /> Rewards in India{" "}
             </h1>
-            <p className="mt-10 text-3xl leading-8 text-white opacity-70">
+            <p className="mt-10 leading-8 text-white opacity-70 text-xl sm:text-3xl ">
               Kalash makes digital gold savings super simple and secure.
             </p>
             {/* <div className="mt-10 flex items-center justify-center gap-x-6">
@@ -190,7 +193,7 @@ export default function Example() {
           </div>
         </div>
 
-        <div className="group -mx-4 flex items-center p-4 transition-colors bg-gray-100 sm:self-auto sm:rounded-2xl lg:mx-0 lg:self-auto lg:p-6 max-w-lg justify-center mx-[0 auto]">
+        {/* <div className="group -mx-4 flex items-center p-4 transition-colors bg-gray-100 sm:self-auto sm:rounded-2xl lg:mx-0 lg:self-auto lg:p-6 max-w-lg justify-center mx-[0 auto]">
           <div className="relative flex h-24 w-24 flex-none items-center justify-center">
             <QrCodeBorder className="absolute inset-0 h-full w-full stroke-gray-300 transition-colors group-hover:stroke-cyan-500" />
             <Image src={qrCode} alt="" unoptimized />
@@ -206,7 +209,7 @@ export default function Example() {
               Scan the QR code to download the app from the App Store.
             </p>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );
