@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import MobileDetect from "mobile-detect";
 
 const getDeviceType = (userAgent) => {
-  console.log(userAgent);
   if (userAgent) {
     const md = new MobileDetect(userAgent);
     if (md.mobile()) {
@@ -21,7 +20,7 @@ const getDeviceType = (userAgent) => {
 };
 
 const notify = (url) => {
-  window.open(url, "_blank");
+  window.location.href = url;
 };
 
 const App = ({ deviceType }) => {
