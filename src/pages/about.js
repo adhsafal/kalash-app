@@ -51,8 +51,8 @@ export default function Example() {
                 className="h-full w-auto"
                 src="/kalash-logo.png"
                 alt="Kalash"
-                width={100}
-                height={100}
+                width={50}
+                height={50}
               />
             </Link>
           </div>
