@@ -45,14 +45,16 @@ export default function Example() {
           aria-label="Global"
         >
           <div className="flex lg:flex-1">
-            <a href="/" className="m-5 p-1.5">
+            <Link href="/" className="m-5 p-1.5">
               <span className="sr-only">Kalash</span>
-              <img
+              <Image
                 className="h-full w-auto"
                 src="/kalash-logo.png"
                 alt="Kalash"
+                width={200}
+                height={200}
               />
-            </a>
+            </Link>
           </div>
           <div className="flex lg:hidden">
             <button
@@ -92,7 +94,7 @@ export default function Example() {
             <div className="flex items-center justify-between">
               <a href="#" className="-m-1.5 p-1.5">
                 <span className="sr-only">Kalash</span>
-                <img
+                <Image
                   className="h-8 w-auto"
                   src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
                   alt=""
